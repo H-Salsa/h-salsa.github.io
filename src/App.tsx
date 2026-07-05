@@ -1,121 +1,146 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import profilePhoto from './assets/Sentado terno cinza.jpeg'
 import './App.css'
 
+const education = [
+  'Bacharel em Direito',
+  'Pós-graduado em Programação Orientada a Objetos com Java',
+  'Graduando em Engenharia de Software',
+]
+
+const teaching = [
+  'Professor de Informática para o CBFPM',
+  'Professor na área de hardware, suporte remoto e configuração de computadores no Curso de Manutenção em Equipamentos de Telecomunicações e Informática',
+]
+
+const technologies = [
+  'React',
+  'TypeScript',
+  'JavaScript',
+  'HTML5',
+  'CSS3',
+  'Java',
+  'PHP',
+  'Laravel',
+  'PostgreSQL',
+  'Git',
+  'GitHub',
+]
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+    <main className="portfolio-page">
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-content">
+          <p className="eyebrow">Portfólio pessoal</p>
+
+          <h1 id="hero-title">Christian Heil Salsa</h1>
+
+          <p className="hero-subtitle">
+            Desenvolvedor em formação, professor de tecnologia e profissional de
+            TI com visão prática de suporte, sistemas e educação técnica.
           </p>
+
+          <p className="hero-description">
+            Unindo desenvolvimento web, suporte técnico e docência, construo
+            soluções claras, manteníveis e alinhadas a problemas reais, com foco
+            em evolução full stack.
+          </p>
+
+          <div className="hero-actions" aria-label="Links principais">
+            <a className="button button-primary" href="https://github.com/H-Salsa" target="_blank">
+              GitHub
+            </a>
+            <a className="button button-secondary" href="mailto:christian.s.salsa@gmail.com">
+              Contato
+            </a>
+          </div>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+
+        <aside className="hero-visual" aria-label="Retrato profissional">
+          <img
+            src={profilePhoto}
+            alt="Christian Heil Salsa sentado em um ambiente profissional"
+          />
+          <div className="photo-caption">
+            <span>Foco atual</span>
+            <strong>Developer React, TypeScript, PHP Laravel e Java</strong>
+          </div>
+        </aside>
       </section>
 
-      <div className="ticks"></div>
+      <section className="summary-grid" aria-label="Resumo profissional">
+        <article>
+          <span>01</span>
+          <h2>Desenvolvimento</h2>
+          <p>
+            Construção de interfaces web modernas, integração com APIs e evolução
+            contínua em aplicações full stack.
+          </p>
+        </article>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <article>
+          <span>02</span>
+          <h2>Ensino técnico</h2>
+          <p>
+            Experiência em sala de aula com informática, hardware, suporte remoto
+            e configuração de computadores.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h2>Base multidisciplinar</h2>
+          <p>
+            Formação em Direito, especialização em Java e graduação em Engenharia
+            de Software em andamento.
+          </p>
+        </article>
+      </section>
+
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Formação</p>
+          <h2>Base acadêmica</h2>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="timeline">
+          {education.map((item) => (
+            <article key={item}>
+              <span />
+              <p>{item}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section className="content-section teaching-section">
+        <div className="section-heading">
+          <p className="eyebrow">Docência</p>
+          <h2>Atuação como professor de tecnologia</h2>
+        </div>
+
+        <div className="teaching-list">
+          {teaching.map((item) => (
+            <article key={item}>
+              <p>{item}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="content-section">
+        <div className="section-heading">
+          <p className="eyebrow">Stack</p>
+          <h2>Tecnologias e ferramentas</h2>
+        </div>
+
+        <div className="skills">
+          {technologies.map((technology) => (
+            <span key={technology}>{technology}</span>
+          ))}
+        </div>
+      </section>
+    </main>
   )
 }
 
